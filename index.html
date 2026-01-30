@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zendo | Calm Productivity</title>
+    <meta name="description" content="Zendo - A minimalist and powerful to-do list for thoughtful productivity.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-circle-notch"></i></span>
+                <h1>Zendo</h1>
+            </div>
+            <p class="subtitle">Focus on what matters.</p>
+        </header>
+
+        <section class="input-section">
+            <form id="todo-form">
+                <div class="input-group">
+                    <input type="text" id="todo-input" placeholder="What needs to be done?" autocomplete="off">
+                    <button type="submit" id="add-btn" aria-label="Add Task">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="stats">
+                <span id="items-left">0 items left</span>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <ul id="todo-list">
+                <!-- Tasks will be injected here -->
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <button id="clear-completed" class="clear-btn">Clear Completed</button>
+        </footer >
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
